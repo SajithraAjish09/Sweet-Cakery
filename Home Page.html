@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweet Cake</title>
+ 
+  <style>
+    .column {
+  float: left;
+  width: 45%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+  </style>
+  
+</head>
+<body>
+  <a href="Home Page.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="Products.html">Product</a>
+  <a href="#Contact">Contact Us</a>
+  <div class="row">
+    <div class="column">
+      <img srcset="cover.jpg 480w, cover.jpg 800w"sizes="(max-width: 600px) 480px,800px" src="cover.jpg" alt="cover photo" style="width:100%">
+    </div>
+    <div class="column">
+      <div class="row">
+        <img src="sweet cake.jfif" alt="logo" style="width:100%">
+      </div>
+      <div class="row">
+        <img src="wording.jpg" alt="wording" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+
+  <h1>Contact</h1>
+  <a name="Contact"></a>
+  <ul>Instagram</ul>
+  <ul>Facebook</ul>
+  <ul>E-mail</ul>
+  <ul>Phone</ul>
+  
+  
+</body>
+</html>

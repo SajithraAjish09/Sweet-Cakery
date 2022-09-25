@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          background-color: #f1f1f1;
+          padding: 20px;
+          font-family: Arial;
+        }
+        
+        /* Center website */
+        .main {
+          max-width: 1000px;
+          margin: auto;
+        }
+        
+        h1 {
+          font-size: 50px;
+          word-break: break-all;
+        }
+        
+        .row {
+          margin: 10px -16px;
+        }
+        
+        /* Add padding BETWEEN each column */
+        .row,
+        .row > .column {
+          padding: 8px;
+        }
+        
+        /* Create three equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 33.33%;
+          display: none; /* Hide all elements by default */
+        }
+        
+        /* Clear floats after rows */ 
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Content */
+        .content {
+          background-color: white;
+          padding: 10px;
+        }
+        
+        /* The "show" class is added to the filtered elements */
+        .show {
+          display: block;
+        }
+        
+        /* Style the buttons */
+        .btn {
+          border: none;
+          outline: none;
+          padding: 12px 16px;
+          background-color: white;
+          cursor: pointer;
+        }
+        
+        .btn:hover {
+          background-color: #ddd;
+        }
+        
+        .btn.active {
+          background-color: #666;
+          color: white;
+        }
+        </style>
+</head>
+<body>
+  <a href="Home Page.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="Products.html">Product</a>
+  <a href="#Contact">Contact Us</a>
+  <h1><b>Product</b></h1>
+  <p>Hello! Welcome to Munamii Cakery! We offer you the richest cakes and cupcakes for all kinds of events and celebrations. Select below what you would like to buy.</p>
+  <div id="myContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+    <button class="btn" onclick="filterSelection('cupcake')"> Cupcake</button>
+    <button class="btn" onclick="filterSelection('Weddingcake')"> Weddingcake</button>
+  </div>
+  <div class="row">
+    <div class="column cupcake">
+      <div class="content">
+      <img src="cp1.jpg" alt="Cupcake" style="width:100%">
+        <h4>Vanilla cupcake</h4>
+        <p>Price: 150 kr</p>
+      </div>
+    </div>
+    <div class="column cupcake">
+      <div class="content">
+      <img src="cp2.jpg" alt="Cupcake" style="width:100%">
+        <h4>Coffee cupcake</h4>
+        <p>Price: 150 kr</p>
+      </div>
+    </div>
+    <div class="column cupcake">
+      <div class="content">
+      <img src="cp3.jpg" alt="Cupcake" style="width:100%">
+        <h4>Red Velvet cupcake</h4>
+        <p>Price: 290 kr</p>
+      </div>
+    </div>
+    <div class="column cupcake">
+      <div class="content">
+      <img src="cp4.jpg" alt="Cupcake" style="width:100%">
+        <h4>Peanut cupcake</h4>
+        <p>Price: 150 kr</p>
+      </div>
+    </div>
+    <div class="column cupcake">
+      <div class="content">
+      <img src="cp5.jpg" alt="Cupcake" style="width:100%">
+        <h4>Caramel cupcake</h4>
+        <p>Price: 220 kr</p>
+      </div>
+    </div>
+    <div class="column cupcake">
+      <div class="content">
+      <img src="cp6.jpg" alt="Cupcake" style="width:100%">
+        <h4>Cookies and Cream cupcake</h4>
+        <p>Price: 250 kr</p>
+      </div>
+    </div>
+    <div class="column cupcake">
+      <div class="content">
+      <img src="cp7.jpg" alt="Cupcake" style="width:100%">
+        <h4>Citrus cupcake</h4>
+        <p>Price: 150 kr</p>
+      </div>
+    </div>
+    <div class="column cupcake">
+      <div class="content">
+      <img src="cp8.jpg" alt="Cupcake" style="width:100%">
+        <h4>Hazelnut cupcake</h4>
+        <p>Price: 200 kr</p>
+      </div>
+    </div>
+    <div class="column Weddingcake">
+      <div class="content">
+        <img src="wd1.jpg" alt="Wedding cake" style="width:100%">
+        <h4>Mr&Mrs Wedding cake</h4>
+        <p>Price: 4900 kr</p>
+      </div>
+    </div>
+    <div class="column Weddingcake">
+      <div class="content">
+      <img src="wd2.jpg" alt="Wedding cake" style="width:100%">
+        <h4>Marble Wedding cake</h4>
+        <p>Price: 5000 kr</p>
+      </div>
+    </div>
+    <div class="column Weddingcake">
+      <div class="content">
+      <img src="wd3.jpg" alt="Wedding cake" style="width:100%">
+        <h4>Golden Wedding cake</h4>
+        <p>Price: 1500 kr</p>
+      </div>
+    </div>
+    <div class="column Weddingcake">
+      <div class="content">
+      <img src="wd4.jpg" alt="Wedding cake" style="width:100%">
+        <h4>Just Wedding cake</h4>
+        <p>Price: 3000 kr</p>
+      </div>
+    </div>
+    <div class="column Weddingcake">
+      <div class="content">
+      <img src="wd5.jpg" alt="Wedding cake" style="width:100%">
+        <h4>Wedding cake Pink</h4>
+        <p>Price: 2500 kr</p>
+      </div>
+    </div>
+    <div class="column Weddingcake">
+      <div class="content">
+      <img src="wd6.jpg" alt="Wedding cake" style="width:100%">
+        <h4>Wedding cake Flower</h4>
+        <p>Price: 5000 kr</p>
+      </div>
+    </div>
+    <div class="column Weddingcake">
+      <div class="content">
+      <img src="wd7.jpg" alt="Wedding cake" style="width:100%">
+        <h4>Wedding cake 3 store</h4>
+        <p>Price: 5000 kr</p>
+      </div>
+    </div>
+    <div class="column Weddingcake">
+      <div class="content">
+      <img src="wd8.jpg" alt="Wedding cake" style="width:100%">
+        <h4>Blessings Wedding cake</h4>
+        <p>Price: 4000 kr</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("myContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+    </script>
+    <h1>Contact</h1>
+    <a name="Contact"></a>
+    <ul>Instagram</ul>
+    <ul>Facebook</ul>
+    <ul>E-mail</ul>
+
+</body>
+</html>
